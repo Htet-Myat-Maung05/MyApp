@@ -16,10 +16,6 @@ const Home: React.FC<{navigation: any}> = ({navigation}) => {
     })
   }
 
-  const openDrawer = () => {
-    navigation.openDrawer(); 
-  }
-
   return (
     <View style={styles.container}>
       <View style={styles.content}>
