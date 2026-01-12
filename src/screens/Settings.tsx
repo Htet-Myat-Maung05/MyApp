@@ -1,15 +1,16 @@
 import { View, Text, StyleSheet } from 'react-native';
 import React from 'react';
+import { useTypedRoute } from '../types/types';
 
-const Settings: React.FC<{route: any}> = ({route}) => {
-  const params = route.params as {
-      username?: string;
-  } | undefined;
+const Settings= () => {
+  const route = useTypedRoute<'Settings'>();
+
+  const {username} = route.params;
 
   return (
      <View style={styles.container}>
             <View style={styles.content}>
-                <Text>{params?.username}</Text>
+                <Text>{username}</Text>
           </View>
         </View>
       );

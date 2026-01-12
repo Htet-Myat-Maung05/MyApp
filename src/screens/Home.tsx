@@ -1,17 +1,15 @@
 import { View, Text, StyleSheet, Button } from 'react-native';
 import React from 'react';
+import { useTypedNavigation } from '../types/types';
 
-const Home: React.FC<{navigation: any}> = ({navigation}) => {
+const Home: React.FC = () => {
+  const navigation = useTypedNavigation<'Home'>();
+
   const handleButtonClick = () => {
     navigation.navigate('About', {
       userId: 1,
       userInfo: {
         username: 'htet myat',
-      }
-    } as {
-      userId: number;
-      userInfo: {
-        username: string;
       }
     })
   }

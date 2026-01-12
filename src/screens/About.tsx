@@ -1,19 +1,18 @@
 import { View, Text, StyleSheet, Button } from 'react-native';
 import React from 'react';
+import { useTypedNavigation, useTypedRoute } from '../types/types';
 
-const About: React.FC<{route: any, navigation: any}> = ({route, navigation}) => {
-  const params = route.params as {
-    userId?: number;
-    userInfo?: {
-      username?: string;
-    };
-  } | undefined;
+const About: React.FC = () => {
+  const route = useTypedRoute<'About'>();
+  const navigation = useTypedNavigation<'About'>();
+
+  const {userId, userInfo} = route.params;
 
   return (
      <View style={styles.container}>
             <View style={styles.content}>
-                <Text>{params?.userId}</Text>
-                <Text>{params?.userInfo?.username}</Text>
+                <Text>{userId}</Text>
+                <Text>{userInfo.username}</Text>
                 <Button title='Go to settings' onPress={()=> navigation.navigate('Settings', {
                   username: "Het Myat Maung"
                 })}/>

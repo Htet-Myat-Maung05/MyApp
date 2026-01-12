@@ -1,8 +1,9 @@
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import Contact from '../screens/Contact';
+import { RootParamList } from '../types/types';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<RootParamList>();
 
 const StackNavigator = () => {
   return (
