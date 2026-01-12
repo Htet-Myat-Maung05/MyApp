@@ -5,7 +5,11 @@ import { useTypedRoute } from '../types/types';
 const Settings= () => {
   const route = useTypedRoute<'Settings'>();
 
-  const {username} = route.params;
+  const params = route.params || {
+    username: ""
+  }
+
+  const {username} = params;
 
   return (
      <View style={styles.container}>

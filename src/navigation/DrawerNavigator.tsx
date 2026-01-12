@@ -7,8 +7,8 @@ import {
 
 import { Text } from 'react-native-gesture-handler';
 import { View } from 'react-native';
-import Contact from '../screens/Contact';
-import Home from '../screens/Home';
+import Home from '@/screens/Home';
+import Contact from '@/screens/Contact';
 
 const Drawer = createDrawerNavigator();
 

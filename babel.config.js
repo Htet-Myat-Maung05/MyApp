@@ -1,6 +1,28 @@
 module.exports = {
   presets: ['module:@react-native/babel-preset'],
   plugins: [
-      ['react-native-worklets/plugin'],w
-    ],
+    ['react-native-worklets/plugin'],
+    [
+      'module-resolver',
+      {
+        root: ['./src'],
+        extensions: [
+          '.ios.js',
+          '.android.js',
+          '.js',
+          '.jsx',
+          '.ts',
+          '.tsx',
+          '.json',
+        ],
+        alias: {
+          '@': './src',
+          '@components': './src/components',
+          '@types': './src/types',
+          '@screens': './src/screens',
+          '@navigation': './src/navigation'
+        }
+      }
+    ]
+  ],
 };

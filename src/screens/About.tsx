@@ -2,11 +2,16 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 import React from 'react';
 import { useTypedNavigation, useTypedRoute } from '../types/types';
 
-const About: React.FC = () => {
+const About = () => {
   const route = useTypedRoute<'About'>();
   const navigation = useTypedNavigation<'About'>();
 
-  const {userId, userInfo} = route.params;
+  const params = route.params || {
+    userId: 0,
+    userInfo: { username: 'Guest' }
+  };
+
+  const { userId, userInfo } = params;
 
   return (
      <View style={styles.container}>
