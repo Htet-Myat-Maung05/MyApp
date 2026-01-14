@@ -9,6 +9,7 @@ import { Text } from 'react-native-gesture-handler';
 import { View } from 'react-native';
 import Home from '@/screens/Home';
 import Contact from '@/screens/Contact';
+import Form from '@/screens/Form';
 
 const Drawer = createDrawerNavigator();
 
@@ -25,15 +26,19 @@ const DrawerNavigator = () => {
           <DrawerItem 
             label="Home" 
             onPress={() => {{
-                console.log("Home");
                 props.navigation.navigate('Home')
             }}}
           />
           <DrawerItem 
             label="contact" 
             onPress={() => {
-                console.log("Contact");
                 props.navigation.navigate('Contact')
+            }}
+          />
+          <DrawerItem 
+            label="Form" 
+            onPress={() => {
+                props.navigation.navigate('Form')
             }}
           />
         </DrawerContentScrollView>
@@ -47,6 +52,10 @@ const DrawerNavigator = () => {
       <Drawer.Screen
         name="Contact"
         component={Contact}
+      />
+      <Drawer.Screen
+        name="Form"
+        component={Form}
       />
     </Drawer.Navigator>
   );
