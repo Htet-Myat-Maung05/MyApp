@@ -19,6 +19,7 @@ const Home: React.FC = () => {
       <View style={styles.content}>
         <Text>Home Screen</Text>
         <Button title='Go to About with params' onPress={handleButtonClick}/>
+        <Button title='Go to Spec page' onPress={() => navigation.navigate('Spec')}/>
       </View>
     </View>
   );

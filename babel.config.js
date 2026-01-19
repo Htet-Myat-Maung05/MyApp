@@ -22,7 +22,8 @@ module.exports = {
           '@types': './src/types',
           '@screens': './src/screens',
           '@navigation': './src/navigation',
-          '@Schema' : './src/Schema'
+          '@Schema' : './src/Schema',
+          '@features': './src/features'
         }
       }
     ]

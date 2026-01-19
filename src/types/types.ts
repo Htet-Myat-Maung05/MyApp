@@ -13,6 +13,7 @@ export type RootParamList ={
         username: string;
     };
     Contact: undefined;
+    Spec: undefined;
 }
 
 export type HomeDrawerParamList ={
